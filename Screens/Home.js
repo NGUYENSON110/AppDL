@@ -32,7 +32,6 @@ export default function Home() {
         <View>
           <View style={style.Header_reSearch}>
             {/* Resreach */}
-
             <View style={style.reSreach}>
               <TextInput
                 placeholder="ReSreach"
@@ -46,14 +45,19 @@ export default function Home() {
                 }}
               />
             </View>
+            
+            <TouchableOpacity>
+              <View style={style.reSreach_icon_bell}>
+                <Icon name="bell" size={23} color="#fff" />
+              </View>
+            </TouchableOpacity>
 
-            <View style={style.reSreach_icon_bell}>
-              <Icon name="bell" size={23} color="#fff" />
-            </View>
-
-            <View style={style.reSreach_icon_bell}>
-              <Icon name="comment" size={23} color="#fff" />
-            </View>
+            <TouchableOpacity>
+              <View style={style.reSreach_icon_bell}>
+                <Icon name="comment" size={23} color="#fff" />
+              </View>
+            </TouchableOpacity>
+            
           </View>
 
           {/*Story   */}
@@ -141,12 +145,14 @@ export default function Home() {
           </View>
 
           {/* Gạch chân */}
-          <View style={{
-            border: 1,
-            width: '100%',
-            height: 2,
-            backgroundColor: "#dfebee",
-          }}></View>
+          <View
+            style={{
+              border: 1,
+              width: "100%",
+              height: 2,
+              backgroundColor: "#dfebee",
+            }}
+          ></View>
           {/* Casual Image, Uu Dai khach hang */}
           <View>
             <View>

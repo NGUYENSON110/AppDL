@@ -3,7 +3,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { StyleSheet, Image, Animated } from "react-native";
 import Home from "../Screens/Home";
 import Page1 from "../Screens/Page1";
-import Page2 from "../Screens/Page2";
+import Explore from "../Screens/Explore";
 import Page3 from "../Screens/Page3";
 import Profile from "../Screens/Profile";
 import { BlurView } from "expo-blur";
@@ -17,12 +17,7 @@ const Tabs = () => {
       screenOptions={{
         tabBarActiveTintColor: "#23527c",
         tabBarStyle: {
-          position: "absolute",
-          left: 10,
-          right: 10,
-          bottom: 20,
-          height: 70,
-          borderRadius: 10,
+          height: 65,
           
         },
       }}
@@ -42,8 +37,8 @@ const Tabs = () => {
       />
      
       <Tab.Screen
-        name="Page2"
-        component={Page2}
+        name="Explore"
+        component={Explore}
         options={{
           title: '',
           tabBarLabel: "Explore",
@@ -53,13 +48,17 @@ const Tabs = () => {
         }}
       />
      <Tab.Screen
-        name="Page1"
+        name="DatCho"
         component={Page1}
         options={{
           title: '',
-          tabBarLabel: 'ADD' ,
+          tabBarLabel: 'ĐẶT CHỖ' ,
           tabBarIcon: ({ color, size }) => (
-            <Icon name="plus-square-o" size={35} color={color} />
+            // <Icon name="plus-square-o" size={35} color={color} />
+            <Image
+            source={require("../Image/logo.jpg")}
+            style={style.icon_chuyenbay}
+            />
           ),
         }}
       />
@@ -70,7 +69,10 @@ const Tabs = () => {
           title: '',
           tabBarLabel: "Giỏ Hàng",
           tabBarIcon: ({ color, size }) => (
-            <Icon name="shopping-cart" size={26} color={color} />
+            <Image
+            source={require("../Image/logogiohang2.png")}
+            style={style.icon_giohang}
+            />
           ),
         }}
       />
@@ -98,5 +100,15 @@ const style = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  
+  icon_chuyenbay:{
+    width: 50,
+    height: 50,
+    borderRadius: 10,
+    
+  },
+  icon_giohang:{
+    width: 35,
+    height: 35,
+    
+  }
 });
